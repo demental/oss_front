@@ -6,39 +6,67 @@ Provide it as a JSON/REST webservice for common operations.
 
 ### API draft
 
-session
-  [POST]create
+#### session
+
+  * [POST]create
+
     params: login, password
+
     return: { session: session_id, created_at: timestamp }
 
-account
-  isp/:isp/accounts
-    [GET]/
-      list all accounts
-    [GET]:account_identifier
-      returns an account details
-    [POST]:account_identifier
-      creates a new account
-    [PUT]:id/change_contract
-      change account contract
-    [PUT]:id/change_location
-      change terminal location
-    [PUT]:id/change_mac
-      change terminal mac address
-    [PUT]:id/suspend
-      suspend account
-    [DELETE]:id/cancel
-      cancel account
+#### account
 
-job
-  isp/:isp/jobs
-  [GET]/
+  * [GET]isp/:isp/accounts/
+
+    list all accounts
+
+  * [GET]isp/:isp/accounts/:account_identifier
+
+    returns an account details
+
+  * [POST]isp/:isp/accounts/:account_identifier
+
+    creates a new account
+
+  * [PUT]isp/:isp/accounts/:account_identifier/change_contract
+
+    change account contract
+
+  * [PUT]isp/:isp/accounts/:account_identifier/change_location
+
+    change terminal location
+
+  * [PUT]isp/:isp/accounts/:account_identifier/change_mac
+
+    change terminal mac address
+
+  * [PUT]isp/:isp/accounts/:account_identifier/suspend
+
+    suspend account
+
+  * [DELETE]isp/:isp/accounts/:account_identifier/cancel
+
+    cancel account
+
+#### job
+
+  * [GET]isp/:isp/jobs/
+
     list all jobs
-  [GET]:id
+
+  * [GET]isp/:isp/jobs/:id
+
     returns an job details
-terminal
-  isp/:isp/terminals
-    [GET]:mac
+
+#### terminal
+
+  * [GET]isp/:isp/terminals/
+
+    list all mac addresses
+
+  * [GET]isp/:isp/terminals/:mac
+
+
 
 
 ### Techology.
