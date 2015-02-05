@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.2.0
+- 2.1.5
+- rbx-2
+- ruby-head
+- jruby-head
+notifications:
+  slack:
+    secure: d0//HzY8pFB0fCVP/wWgdG0czH/vbQtgP68dGU9sejx806VwZa7hp2h/dp6vbLeWWKotUMXvd49xiEE9/hjQVnK3QTbp0sWqZIOfCBo0AapS94c7ksKhmMnHyKPG/+MeK0sY2WyRqFCra4w7PY8JXf7H099jhfeiL6g+NibwFqk=
