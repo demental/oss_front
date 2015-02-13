@@ -12,14 +12,6 @@ Provide it as a JSON/REST webservice for common operations.
 
 ### API draft
 
-#### session
-
-  * [POST]create
-
-    params: login, password
-
-    return: { session: session_id, created_at: timestamp }
-
 #### account
 
   * [GET]isp/:isp/accounts/
